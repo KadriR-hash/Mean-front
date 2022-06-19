@@ -15,6 +15,10 @@ import { ReservationComponent } from './components/reservation/reservation.compo
 import { TestimonialsComponent } from './components/testimonials/testimonials.component';
 import { RecentNewsComponent } from './components/recent-news/recent-news.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { LoginComponent } from './components/login/login.component';
+import { BindingComponent } from './components/binding/binding.component';
+import { AddAdminComponent } from './components/add-admin/add-admin.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -32,10 +36,15 @@ import { FooterComponent } from './components/footer/footer.component';
     TestimonialsComponent,
     RecentNewsComponent,
     FooterComponent,
+    LoginComponent,
+    BindingComponent,
+    AddAdminComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
