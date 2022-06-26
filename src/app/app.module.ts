@@ -20,6 +20,7 @@ import { AddAdminComponent } from './components/add-admin/add-admin.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SignupComponent } from './components/signup/signup.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AddChefComponent } from './components/add-chef/add-chef.component';
 
 
 @NgModule({
@@ -41,6 +42,7 @@ import { HttpClientModule } from '@angular/common/http';
     BindingComponent,
     AddAdminComponent,
     SignupComponent,
+    AddChefComponent,
   ],
   imports: [
     BrowserModule,
