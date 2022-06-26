@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -19,6 +18,8 @@ import { LoginComponent } from './components/login/login.component';
 import { BindingComponent } from './components/binding/binding.component';
 import { AddAdminComponent } from './components/add-admin/add-admin.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SignupComponent } from './components/signup/signup.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -39,12 +40,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     LoginComponent,
     BindingComponent,
     AddAdminComponent,
+    SignupComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
