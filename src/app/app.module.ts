@@ -22,6 +22,8 @@ import { SignupComponent } from './components/signup/signup.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AddChefComponent } from './components/add-chef/add-chef.component';
 import { AddPlatComponent } from './components/add-plat/add-plat.component';
+import { DashboardAdminComponent } from './components/dashboard-admin/dashboard-admin.component';
+import { DashboardChefComponent } from './components/dashboard-chef/dashboard-chef.component';
 
 
 @NgModule({
@@ -45,6 +47,8 @@ import { AddPlatComponent } from './components/add-plat/add-plat.component';
     SignupComponent,
     AddChefComponent,
     AddPlatComponent,
+    DashboardAdminComponent,
+    DashboardChefComponent,
   ],
   imports: [
     BrowserModule,

@@ -22,7 +22,9 @@ export class UserService {
   getUserById(userId: any){
     return this.httpClient.get<{user : any}>(`${this.serverURL}/${userId}`);
   }
-
+  getUsersByRole(role: any){
+    return this.httpClient.get<{users : any}>(`${this.serverURL}/getUsersByRole/${role}`);
+  }
   updateUser(user : any){
     return this.httpClient.put<{message : any}>(`${this.serverURL}/${user._id}`,user);
   }

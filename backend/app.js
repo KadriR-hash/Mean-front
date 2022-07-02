@@ -178,10 +178,10 @@ app.delete("/users/:id", (req, res) => {
 })
 
 // Business Logic : get users by role
-app.get("/users/role/:role", (req, res) => {
+app.get("/users/getUsersByRole/:role", (req, res) => {
     console.log("HERE IS GET USER BY ROLE");
     let userRole = req.params.role;
-    user.find({ role: userRole }).then(
+    User.find({ role: userRole }).then(
 
         (docs) => {
             if (!docs) {

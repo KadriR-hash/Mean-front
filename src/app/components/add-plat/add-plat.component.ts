@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { log } from 'console';
 
 @Component({
   selector: 'app-add-plat',
