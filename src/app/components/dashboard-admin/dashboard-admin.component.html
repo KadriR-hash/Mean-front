@@ -48,15 +48,71 @@
                                         </td>
 
                                     </tr>
-                                
+
                                 </tbody>
                             </table>
 
                         </div>
                         <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-                            ...</div>
+                            <table class="table table-dark">
+                                <thead>
+                                    <tr>
+
+                                        <th scope="col">First Name</th>
+                                        <th scope="col">Last Name</th>
+                                        <th scope="col">Email</th>
+                                        <th scope="col">speciality</th>
+                                        <th scope="col">experience</th>
+                                        <th scope="col">dateofbirth</th>
+                                        <th scope="col">Actions</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let c of chefs">
+                                        <td>{{c.firstName}}</td>
+                                        <td>{{c.lastName}}</td>
+                                        <td>{{c.email}}</td>
+                                        <td>{{c.speciality}}</td>
+                                        <td>{{c.experience}}</td>
+                                        <td>{{c.dateOfBirth}}</td>
+                                        <td>
+                                            <button type="button" class="btn btn-primary">Display</button>
+                                            <button type="button" class="btn btn-warning">Edit</button>
+                                            <button type="button" class="btn btn-danger">Delete</button>
+                                        </td>
+
+                                    </tr>
+
+                                </tbody>
+                            </table></div>
                         <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-                            ...</div>
+                            <table class="table table-dark">
+                                <thead>
+                                    <tr>
+
+                                        <th scope="col">First Name</th>
+                                        <th scope="col">Last Name</th>
+                                        <th scope="col">Email</th>
+                                        <th scope="col">Actions</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let a of clients">
+                                        <td>{{a.firstName}}</td>
+                                        <td>{{a.lastName}}</td>
+                                        <td>{{a.email}}</td>
+                                        <td>
+                                            <button type="button" class="btn btn-primary">Display</button>
+                                            <button type="button" class="btn btn-warning">Edit</button>
+                                            <button type="button" class="btn btn-danger">Delete</button>
+                                        </td>
+
+                                    </tr>
+
+                                </tbody>
+                            </table></div>
                     </div>
 
                 </div>
