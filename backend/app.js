@@ -323,7 +323,7 @@ app.delete("/plats/:id", (req, res) => {
 })
 
 // LOGIN
-app.post("/login", (req, res) => {
+app.post("/users/login", (req, res) => {
     console.log("Here in login", req.body);
     User.findOne({ email: req.body.email }).then(
         (resultEmail) => {

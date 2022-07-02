@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UserService } from 'src/app/services/user.service';
+import { MustMatch } from '../confirmPwd';
 
 @Component({
   selector: 'app-signup',
@@ -15,13 +16,18 @@ export class SignupComponent implements OnInit {
 
   ngOnInit() {
     this.signupForm = this.formBuilder.group({
-      firstName : [''],
-      lastName : [''],
-      email : [''],
-      password : [''],
-      tel : ['']
-    })
-  }
+    firstName: ['', [Validators.minLength(5), Validators.required]],
+    lastName: ['', Validators.minLength(4)],
+    email: ['', [Validators.email, Validators.required]],
+    password: ['', [Validators.minLength(8), Validators.maxLength(12)]],
+    confirmPassword: [''],
+    tel: ['']
+    }, 
+    {
+    validator: MustMatch('password','confirmPassword')
+    }
+    );
+    }
   signup(f : any){
     console.log(f);
     f.role = "client";

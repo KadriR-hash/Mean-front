@@ -21,6 +21,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SignupComponent } from './components/signup/signup.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AddChefComponent } from './components/add-chef/add-chef.component';
+import { AddPlatComponent } from './components/add-plat/add-plat.component';
 
 
 @NgModule({
@@ -43,6 +44,7 @@ import { AddChefComponent } from './components/add-chef/add-chef.component';
     AddAdminComponent,
     SignupComponent,
     AddChefComponent,
+    AddPlatComponent,
   ],
   imports: [
     BrowserModule,

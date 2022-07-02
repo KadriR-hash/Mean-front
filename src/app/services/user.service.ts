@@ -11,6 +11,9 @@ export class UserService {
   createUser(user : any) {
     return this.httpClient.post<{message : any}>(this.serverURL,user);
   }
+  login(user : any) {
+    return this.httpClient.post<{message : any,connectedUser : any}>(this.serverURL+'/login',user);
+  }
 
   getAllUsers(){
     return this.httpClient.get<{users : any}>(this.serverURL);
