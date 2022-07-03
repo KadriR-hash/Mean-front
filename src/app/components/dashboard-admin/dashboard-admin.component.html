@@ -42,9 +42,9 @@
                                         <td>{{a.lastName}}</td>
                                         <td>{{a.email}}</td>
                                         <td>
-                                            <button type="button" class="btn btn-primary">Display</button>
-                                            <button type="button" class="btn btn-warning">Edit</button>
-                                            <button type="button" class="btn btn-danger">Delete</button>
+                                            <button type="button" class="btn btn-primary" (click)="displayUser(a._id)">Display</button>
+                                            <button type="button" class="btn btn-warning" (click)="editUser(a._id)">Edit</button>
+                                            <button type="button" class="btn btn-danger" (click)="deleteAdmin(a._id)">Delete</button>
                                         </td>
 
                                     </tr>
@@ -70,16 +70,17 @@
                                 </thead>
                                 <tbody>
                                     <tr *ngFor="let c of chefs">
-                                        <td>{{c.firstName}}</td>
-                                        <td>{{c.lastName}}</td>
+                                        <td>{{c.firstName |uppercase}}</td>
+                                        <td>{{c.lastName |reverse }}</td>
                                         <td>{{c.email}}</td>
-                                        <td>{{c.speciality}}</td>
+                                        <!--<td [ngStyle]="{'color' : getColor(c.speciality)}" >{{c.speciality}}</td >!-->
+                                        <td [ngClass]="{'class1' : c.speciality == 'TN', 'class2' : c.speciality == 'FR', 'class3' : c.speciality == 'IT'}" >{{c.speciality}}</td >
                                         <td>{{c.experience}}</td>
-                                        <td>{{c.dateOfBirth}}</td>
+                                        <td>{{c.dateOfBirth |date}}</td>
                                         <td>
-                                            <button type="button" class="btn btn-primary">Display</button>
+                                            <button type="button" class="btn btn-primary" (click)="displayUser(c._id)">Display</button>
                                             <button type="button" class="btn btn-warning">Edit</button>
-                                            <button type="button" class="btn btn-danger">Delete</button>
+                                            <button type="button" class="btn btn-danger" (click)="deleteChef(c._id)">Delete</button>
                                         </td>
 
                                     </tr>
@@ -104,9 +105,9 @@
                                         <td>{{a.lastName}}</td>
                                         <td>{{a.email}}</td>
                                         <td>
-                                            <button type="button" class="btn btn-primary">Display</button>
+                                            <button type="button" class="btn btn-primary" (click)="displayUser(a._id)">Display</button>
                                             <button type="button" class="btn btn-warning">Edit</button>
-                                            <button type="button" class="btn btn-danger">Delete</button>
+                                            <button type="button" class="btn btn-danger"  (click)="deleteClient(a._id)">Delete</button>
                                         </td>
 
                                     </tr>

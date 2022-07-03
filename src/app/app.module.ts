@@ -24,6 +24,9 @@ import { AddChefComponent } from './components/add-chef/add-chef.component';
 import { AddPlatComponent } from './components/add-plat/add-plat.component';
 import { DashboardAdminComponent } from './components/dashboard-admin/dashboard-admin.component';
 import { DashboardChefComponent } from './components/dashboard-chef/dashboard-chef.component';
+import { ChefComponent } from './components/chef/chef.component';
+import { ReversePipe } from './pipes/reverse.pipe';
+import { DisplayUserComponent } from './components/display-user/display-user.component';
 
 
 @NgModule({
@@ -49,6 +52,9 @@ import { DashboardChefComponent } from './components/dashboard-chef/dashboard-ch
     AddPlatComponent,
     DashboardAdminComponent,
     DashboardChefComponent,
+    ChefComponent,
+    ReversePipe,
+    DisplayUserComponent,
   ],
   imports: [
     BrowserModule,
